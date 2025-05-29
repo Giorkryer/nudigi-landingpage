@@ -2,8 +2,9 @@
 'use client'
 import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
-import { ClientButton } from './components/Navbar/ClientButton'
 import BenefitsSection from './components/BenefitsSection'
+import { PinkTitle } from './components/Texts/PinkTitle'
+import { ClientButton } from './components/Navbar/ClientButton'
 
 export default function Home() {
   return (
@@ -33,36 +34,28 @@ export default function Home() {
           textAlign: 'center', // Centralizado em todas as resoluções
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center' // Centraliza todos os elementos filhos
+          alignItems: 'center', // Centraliza todos os elementos filhos
+          justifyContent: 'center'
         }}>
-          <Typography variant="h1" sx={{
-            fontFamily: 'Helvetica Rounded, Arial Rounded MT Bold, sans-serif',
-            fontSize: { xs: '2rem', md: '2.8rem' },
-            color: '#D33180',
-            mb: 3,
-            lineHeight: 1.2,
-            width: '100%'
-          }}>
-            Lorem ipsum dolor sit amet
-          </Typography>
+          <PinkTitle>Gestão Completa para Seu Salão de Beleza</PinkTitle>
           
           <Typography variant="body1" sx={{
             fontFamily: 'Helvetica, Arial, sans-serif',
-            fontSize: { xs: '1rem', md: '1.2rem' },
+            /*fontSize: { xs: '1rem', md: '1.2rem' },*/
             mb: 4,
             color: 'text.primary',
             lineHeight: 1.6,
             maxWidth: '90%'
           }}>
-            Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+            Tudo o que você precisa para organizar clientes, agendamentos e finanças em um único lugar!
           </Typography>
 
-          <ClientButton sx={{ 
-            transform: { md: 'scale(1.1)' },
-            transition: 'transform 0.3s ease'
-          }}>
-            FACA PARTE DISSO
-          </ClientButton>
+          <ClientButton children ='FAÇA PARTE DISSO' sectionId="planos" sx={{ 
+            width: '100%',
+            maxWidth: '180px', // Mantém a largura mínima
+            display: 'block',
+            mx: 'auto'
+           }}/>
         </Box>
 
         {/* Container de Imagem - Centralizado */}

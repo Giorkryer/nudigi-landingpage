@@ -2,28 +2,33 @@
 'use client'
 import { Grid, Typography, Box } from '@mui/material'
 import { CardPadronizado } from './CardPadronizado'
+import { PinkTitle } from './Texts/PinkTitle'
 
 const BenefitsSection = () => {
-  const benefits = [
+  const cardsBeneficios = [
     {
-      emoji: '🚀',
-      title: 'Alta Performance',
-      text: 'Soluções otimizadas para máxima velocidade e eficiência operacional.'
+      emoji: '📊',
+      title: 'Financeiro Simplificado',
+      text: 'Gerencie entradas, saídas e lucros em tempo real com relatórios automáticos e precisos.',
+      onClick: () => console.log('Performance clicked')
     },
     {
-      emoji: '🔒',
-      title: 'Segurança Total',
-      text: 'Proteção de dados com criptografia avançada e protocolos de segurança.'
+      emoji: '📅',
+      title: 'Agendamento Inteligente',
+      text: 'Reduza falhas de comunicação com agenda online, lembretes automáticos e controle de horários integrado.',
+      onClick: () => console.log('Segurança clicked')
     },
     {
-      emoji: '💡',
-      title: 'Inovação Constante',
-      text: 'Tecnologia de ponta para manter seu negócio à frente da concorrência.'
+      emoji: '📱',
+      title: 'Acesso Multiplataforma',
+      text: 'Gerencie seu salão de qualquer lugar através de computadores, tablets e smartphones.',
+      onClick: () => console.log('Inovação clicked')
     },
     {
-      emoji: '⏱️',
-      title: 'Eficiência',
-      text: 'Processos automatizados que economizam tempo e recursos.'
+      emoji: '📦',
+      title: 'Estoque Sob Controle',
+      text: 'Controle de produtos, tudo em um único sistema.',
+      onClick: () => console.log('Eficiência clicked')
     }
   ]
 
@@ -31,73 +36,80 @@ const BenefitsSection = () => {
     <Box 
       component="section" 
       sx={{ 
-        height: '780px',
+        minHeight: '780px',
         backgroundColor: '#F8EFE3',
-        py: 8,
-        px: 4
+        py: 10,
+        px: 5,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        width: '100%',
+        overflow: 'hidden'
       }}
     >
-      {/* Título Principal */}
-      <Typography 
-        variant="h2" 
-        sx={{
-          fontFamily: 'Helvetica Rounded, Arial Rounded MT Bold, sans-serif',
-          fontSize: '36px',
-          fontWeight: 'bold',
-          color: '#D33180',
-          textAlign: 'center',
-          mb: 3
-        }}
-      >
-        BENEFÍCIOS
-      </Typography>
+      <PinkTitle>BENEFÍCIOS</PinkTitle>
 
-      {/* Subtítulo */}
       <Typography 
         variant="body1" 
         sx={{
-          fontFamily: 'Helvetica, Arial, sans-serif',
-          fontSize: '18px',
+          fontFamily: 'Helvetica Rounded, Arial, sans-serif',
+          fontSize: { xs: '16px', md: '18px' },
           color: '#333',
           textAlign: 'center',
-          maxWidth: '800px',
+          maxWidth: '900px',
           mx: 'auto',
-          mb: 8
+          mb: 8,
+          px: 2
         }}
       >
-        Fusce nec lobortis magna. Etiam porta lectus in arcu maximus euismod.
+        Descubra como nosso sistema transforma a gestão do seu salão em uma experiência eficiente e prazerosa.
       </Typography>
 
-      <Grid 
-        container 
-        spacing={4} 
-        sx={{ 
-          maxWidth: '1200px',
-          mx: 'auto',
-          justifyContent: 'center',
-          alignItems: 'center'
-        }}
-      >
-        {benefits.map((benefit, index) => (
-          <Grid 
-            item 
-            xs={11}
-            sm={6}
-            md={3}
-            key={index}
-            sx={{
-              display: 'flex',
-              justifyContent: 'center'
-            }}
-          >
-            <CardPadronizado
-              emoji={benefit.emoji}
-              title={benefit.title}
-              text={benefit.text}
-            />
-          </Grid>
-        ))}
-      </Grid>
+      <Box sx={{
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        px: 2
+      }}>
+        <Grid 
+          container 
+          spacing={4}
+          sx={{
+            maxWidth: '1200px',
+            justifyContent: 'center',
+            margin: '0',
+            width: 'auto'
+          }}
+        >
+          {cardsBeneficios.map((benefit, index) => (
+            <Grid 
+              item 
+              key={index}
+              xs={12}
+              sm={6}
+              md={3}
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                minWidth: '250px',
+                maxWidth: '280px',
+                padding: '0px'
+              }}
+            >
+              <CardPadronizado
+                emoji={benefit.emoji}
+                title={benefit.title}
+                text={benefit.text}
+                onClick={benefit.onClick}
+                sx={{
+                  width: '100%',
+                  height: '280px'
+                }}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
     </Box>
   )
 }
