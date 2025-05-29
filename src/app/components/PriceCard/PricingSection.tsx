@@ -26,7 +26,7 @@ export const PricingSection = () => {
         'Benefício exclusivo'
       ],
       isPopular: true,
-      buttonLink: 'https://suaplataforma.com/assinatura-anual' // Link externo
+      buttonLink: 'https://suaplataforma.com/assinatura-anual' 
     },
     {
       title: 'Trimestral',
@@ -37,7 +37,7 @@ export const PricingSection = () => {
         'Lorem ipsum dolor sit',
         'Lorem ipsum dolor sit'
       ],
-      buttonLink: 'https://suaplataforma.com/assinatura-trimestral' // Link externo
+      buttonLink: 'https://suaplataforma.com/assinatura-trimestral' 
     }
   ]
 
@@ -65,11 +65,11 @@ export const PricingSection = () => {
         fontSize: '18px',
         color: '#333',
         textAlign: 'center',
-        maxWidth: '800px',
+        maxWidth: '900px',
         mx: 'auto',
         mb: 8
       }}>
-        Fusce nec lobortis magna. Etiam porta lectus in arcu maximus euismod.
+        Escolha o plano ideal para você e aproveite todos os benefícios com o melhor custo-benefício.
       </Typography>
 
 <Grid container spacing={4} justifyContent="center">
@@ -81,7 +81,7 @@ export const PricingSection = () => {
               discountedPrice={plan.discountedPrice}
               features={plan.features}
               isPopular={plan.isPopular}
-              buttonLink={plan.buttonLink}  // Passando o link para o PriceCard
+              buttonLink={plan.buttonLink} 
             />
           </Grid>
         ))}

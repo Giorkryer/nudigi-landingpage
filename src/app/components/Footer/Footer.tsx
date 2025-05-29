@@ -54,18 +54,17 @@ export default function Footer() {
     >
       <Container maxWidth="lg">
         <Box sx={{ position: 'relative', zIndex: 1 }}>
-          {/* Logo e slogan - ajustado conforme solicitado */}
           <Box sx={{ 
             display: 'flex', 
-            alignItems: 'flex-start', // Alinhado ao topo
-            mb: 2, // Espaço reduzido
+            alignItems: 'flex-start', 
+            mb: 2, 
             flexDirection: 'column' // Empilhado verticalmente
           }}>
             <Box sx={{ 
               position: 'relative', 
-              width: 120, // Largura reduzida
-              height: 100, // Altura reduzida
-              mb: -2// Espaço abaixo da logo
+              width: 120, 
+              height: 100, 
+              mb: -2
             }}>
               <Image
                 src="/images/Logo.png"
@@ -78,7 +77,7 @@ export default function Footer() {
               <Typography sx={{ 
                 color: '#aaa', 
                 maxWidth: 600,
-                fontSize: '0.9rem' // Texto um pouco menor
+                fontSize: '0.9rem'
               }}>
                 Transformamos beleza em arte, cuidando de você com excelência e dedicação.
               </Typography>
@@ -86,12 +85,12 @@ export default function Footer() {
           </Box>
 
           {/* Conteúdo principal do footer */}
-          <Grid container spacing={3} justifyContent="space-between"> {/* Espaço reduzido */}
+          <Grid container spacing={3} justifyContent="space-between">
             {/* Coluna 1: Links rápidos */}
             <Grid item xs={12} md={5}>
               <Typography variant="h6" sx={{ 
                 fontWeight: 'bold', 
-                mb: 2, // Espaço reduzido
+                mb: 2, 
                 color: '#f0f0f0'
               }}>
                 Links Rápidos
@@ -109,7 +108,7 @@ export default function Footer() {
                     underline="none"
                     sx={{
                       display: 'block',
-                      mb: 1.5, // Espaço reduzido
+                      mb: 1.5, 
                       color: '#aaa',
                       transition: 'color 0.3s',
                       '&:hover': {
@@ -127,7 +126,7 @@ export default function Footer() {
             <Grid item xs={12} md={5}>
               <Typography variant="h6" sx={{ 
                 fontWeight: 'bold', 
-                mb: 2, // Espaço reduzido
+                mb: 2, 
                 color: '#f0f0f0'
               }}>
                 Contato
@@ -194,14 +193,13 @@ export default function Footer() {
             </Grid>
           </Grid>
 
-          {/* Copyright - mais compacto */}
           <Box sx={{ 
-            mt: 4, // Espaço reduzido
-            pt: 3, // Espaço reduzido
+            mt: 4, 
+            pt: 3, 
             borderTop: '1px solid #333', 
             textAlign: 'center',
             color: '#aaa',
-            fontSize: '0.8rem' // Texto menor
+            fontSize: '0.8rem' 
           }}>
             © 2025 Nudigi. Todos os direitos reservados.
           </Box>

@@ -17,14 +17,13 @@ export const NavLink = ({ href, children }: {
         position: 'relative',
         '&:hover': {
           color: '#D33180',
-          backgroundColor: 'transparent', // Garante que o background não mude
+          backgroundColor: 'transparent', 
           '&::after': {
             width: '100%',
             opacity: 1
           }
         },
         transition: 'color 0.3s ease',
-        // Efeito de underline sutil
         '&::after': {
           content: '""',
           position: 'absolute',

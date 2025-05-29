@@ -36,7 +36,6 @@ export const ClientButton = ({
     }
   }
 
-  // Se tiver href, usa Link do Next.js
   if (href) {
     return (
       <Link href={href} passHref legacyBehavior>
@@ -65,7 +64,7 @@ export const ClientButton = ({
     )
   }
 
-  // Caso contrário, renderiza botão normal
+ 
   return (
     <Button
       variant="contained"

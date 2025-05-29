@@ -18,13 +18,12 @@ export const Navbar = () => {
   return (
     <AppBar position="sticky" color="inherit" elevation={1}>
       <Toolbar sx={{ justifyContent: 'space-between', px: 4 }}>
-        {/* Logo */}
         <Link href="/" passHref>
           <Box
             sx={{
               position: 'relative',
-              width: 160, // Ajuste conforme necessário
-              height: 40, // Ajuste conforme necessário
+              width: 160, 
+              height: 40, 
               cursor: 'pointer',
               '&:hover img': {
                 opacity: 0.8

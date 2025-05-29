@@ -51,10 +51,10 @@ export default function AboutSection() {
                   overflow: 'hidden',
                   boxShadow: 3,
                   height: '500px',
-                  transform: 'rotate(-2deg)',
+                  transform: 'rotate(0deg)',
                   transition: 'transform 0.3s ease',
                   '&:hover': {
-                    transform: 'rotate(0)',
+                    transform: 'rotate(-2deg)',
                   }
                 }}
               >
@@ -69,7 +69,6 @@ export default function AboutSection() {
             </Grid>
           )}
 
-          {/* Coluna do Conteúdo */}
           <Grid item xs={12} md={6}>
             <PinkTitle>Quem somos</PinkTitle>
 
@@ -79,7 +78,6 @@ export default function AboutSection() {
             
             <Paragraph>No Nudigi, acreditamos que a beleza é uma forma de autoexpressão. Por isso, valorizamos o diálogo e a escuta atenta para entender as necessidades e desejos de cada pessoa. Nossos tratamentos são cuidadosamente planejados para proporcionar transformações que refletem a essência de quem você é.</Paragraph>
 
-            {/* Divisor decorativo */}
             <Box sx={{ 
               height: '1px', 
               bgcolor: 'divider', 
@@ -97,7 +95,6 @@ export default function AboutSection() {
               }
             }} />
 
-            {/* Estatísticas - CORRIGIDAS PARA PRETO */}
             <Grid container spacing={3}>
               <Grid item xs={6} sm={6} md={6}>
                 <Box sx={{ 

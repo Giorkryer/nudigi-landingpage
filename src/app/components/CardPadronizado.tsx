@@ -51,7 +51,7 @@ export const CardPadronizado = ({
         fontSize: '14px', 
         mb: 2,
         transition: 'transform 0.3s ease',
-        alignSelf: 'flex-start' // Alinha o emoji à esquerda
+        alignSelf: 'flex-start' 
       }}
     >
       {emoji}
@@ -67,7 +67,7 @@ export const CardPadronizado = ({
         color: '#D33180',
         mb: 2,
         transition: 'color 0.3s ease',
-        flexGrow: 1 // Faz o título ocupar espaço disponível
+        flexGrow: 1 
       }}
     >
       {title}
@@ -76,7 +76,7 @@ export const CardPadronizado = ({
     <Typography
       sx={{
         fontFamily: 'Helvetica, Arial, sans-serif',
-        fontSize: '16px', // Reduzi um pouco para melhor leitura
+        fontSize: '16px', 
         color: '#666',
         lineHeight: 1.6,
         mb: 8

@@ -31,17 +31,16 @@ export default function Home() {
           flex: 1,
           maxWidth: '600px',
           width: '100%',
-          textAlign: 'center', // Centralizado em todas as resoluções
+          textAlign: 'center', 
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center', // Centraliza todos os elementos filhos
+          alignItems: 'center', 
           justifyContent: 'center'
         }}>
           <PinkTitle>Gestão Completa para Seu Salão de Beleza</PinkTitle>
           
           <Typography variant="body1" sx={{
             fontFamily: 'Helvetica, Arial, sans-serif',
-            /*fontSize: { xs: '1rem', md: '1.2rem' },*/
             mb: 4,
             color: 'text.primary',
             lineHeight: 1.6,
@@ -52,7 +51,7 @@ export default function Home() {
 
           <ClientButton children ='FAÇA PARTE DISSO' sectionId="planos" sx={{ 
             width: '100%',
-            maxWidth: '180px', // Mantém a largura mínima
+            maxWidth: '180px',
             display: 'block',
             mx: 'auto'
            }}/>
