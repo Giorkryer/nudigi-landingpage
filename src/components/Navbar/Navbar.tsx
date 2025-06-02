@@ -5,12 +5,11 @@ import { AppBar, Toolbar, Box } from '@mui/material'
 import Link from 'next/link'
 import Image from 'next/image'
 import { NavLink } from './NavLink'
-import { ClientButton } from './ClientButton'
+import { ClientButton } from '../Shared/ClientButton'
 
 export const Navbar = () => {
   const navItems = [
     { name: 'Planos', href: '#planos' },
-    { name: 'Negócios', href: '#negocios' },
     { name: 'Quem somos', href: '#quem-somos' },
     { name: 'Contato', href: '#contato' }
   ]

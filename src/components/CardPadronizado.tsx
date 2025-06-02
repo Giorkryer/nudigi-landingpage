@@ -25,21 +25,21 @@ export const CardPadronizado = ({
       backgroundColor: 'white',
       borderRadius: '8px',
       p: 3,
-      boxShadow: '0px 4px 16px rgba(211, 49, 128, 0.15)', // Sombra rosa sutil
+      boxShadow: '0px 4px 16px rgba(211, 49, 128, 0.15)',
       mx: 'auto',
-      transition: 'all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)', // Transição mais suave
+      transition: 'all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)', 
       transformOrigin: 'center',
       cursor: 'pointer',
       display: 'flex',
       flexDirection: 'column',
       '&:hover': {
-        transform: 'translateY(-5px) scale(1.02)', // Efeito de levitar
+        transform: 'translateY(-5px) scale(1.02)', 
         boxShadow: '0px 8px 24px rgba(211, 49, 128, 0.2)',
         '& .card-title': {
           color: '#C22A6E'
         },
         '& .card-emoji': {
-          transform: 'scale(1.2)' // Efeito no emoji
+          transform: 'scale(1.2)' 
         }
       },
       ...sx
@@ -49,7 +49,7 @@ export const CardPadronizado = ({
       className="card-emoji"
       sx={{ 
         fontSize: '14px', 
-        mb: 2,
+        mb: 1,
         transition: 'transform 0.3s ease',
         alignSelf: 'flex-start' 
       }}
@@ -65,7 +65,7 @@ export const CardPadronizado = ({
         fontSize: '20px',
         fontWeight: 'bold',
         color: '#D33180',
-        mb: 2,
+        mb: 1,
         transition: 'color 0.3s ease',
         flexGrow: 1 
       }}

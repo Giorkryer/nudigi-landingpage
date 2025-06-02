@@ -5,7 +5,7 @@ import { Button, SxProps, Theme } from '@mui/material'
 interface RoundedButtonProps {
   children: React.ReactNode
   sx?: SxProps<Theme>
-  [key: string]: any 
+  [key: string]: any
 }
 
 export const RoundedButton = ({ children, sx, ...props }: RoundedButtonProps) => (

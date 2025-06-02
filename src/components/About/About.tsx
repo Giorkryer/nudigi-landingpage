@@ -3,8 +3,8 @@
 
 import { Box, Grid, useTheme, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
-import { PinkTitle } from '../Texts/PinkTitle';
-import { Paragraph } from '../Texts/Paragraph';
+import { PinkTitle } from '../Shared/PinkTitle';
+import { Paragraph } from '../Shared/Paragraph';
 
 export default function AboutSection() {
   const theme = useTheme();
@@ -70,7 +70,7 @@ export default function AboutSection() {
           )}
 
           <Grid item xs={12} md={6}>
-            <PinkTitle>Quem somos</PinkTitle>
+            <PinkTitle >Quem somos</PinkTitle>
 
             <Paragraph>Há mais de uma década, o <strong>Nudigi</strong> tem sido um refúgio de beleza e bem-estar no coração da cidade. Fundado com a missão de realçar a beleza única de cada cliente, nosso salão combina técnicas inovadoras com um atendimento personalizado, criando experiências que vão além da estética.</Paragraph>
             

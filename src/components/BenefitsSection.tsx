@@ -2,7 +2,7 @@
 'use client'
 import { Grid, Typography, Box } from '@mui/material'
 import { CardPadronizado } from './CardPadronizado'
-import { PinkTitle } from './Texts/PinkTitle'
+import { PinkTitle } from './Shared/PinkTitle'
 
 const BenefitsSection = () => {
   const cardsBeneficios = [
