@@ -1,4 +1,5 @@
-'use client';
+// src/app/checkout/page.tsx
+"use client";
 import { useState, useEffect } from "react";
 import {
   Box,
@@ -14,7 +15,7 @@ import {
   Checkbox,
   Divider,
 } from "@mui/material";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { LocalizationProvider, MobileDatePicker } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import dayjs from "dayjs";
@@ -30,30 +31,31 @@ const states = [
 const planDetailsFallback = {
   basic: { 
     name: "Básico", 
-    monthlyPrice: 50.00,
-    annualTotalPrice: 45.00 * 12,
-    defaultMonthlyDisplay: 50.00,
-    defaultAnnualDisplayMonthly: 45.00
+    monthlyPrice: 50.00,                  
+    annualTotalPrice: 45.00 * 12,         
+    defaultMonthlyDisplay: 50.00,         
+    defaultAnnualDisplayMonthly: 45.00    
   },
   vip: { 
     name: "Vip", 
-    monthlyPrice: 70.00,
-    annualTotalPrice: 50.00 * 12,
-    defaultMonthlyDisplay: 70.00,
-    defaultAnnualDisplayMonthly: 50.00
+    monthlyPrice: 70.00,                  
+    annualTotalPrice: 50.00 * 12,         
+    defaultMonthlyDisplay: 70.00,         
+    defaultAnnualDisplayMonthly: 50.00    
   },
   premium: { 
     name: "Premium", 
-    monthlyPrice: 100.00,
-    annualTotalPrice: 80.00 * 12,
-    defaultMonthlyDisplay: 100.00,
-    defaultAnnualDisplayMonthly: 80.00
+    monthlyPrice: 100.00,                 
+    annualTotalPrice: 80.00 * 12,         
+    defaultMonthlyDisplay: 100.00,        
+    defaultAnnualDisplayMonthly: 80.00   
   },
 };
 
-export default function CheckoutClient() {
+export default function CheckoutPage() {
   const router = useRouter();
-
+  const searchParams = useSearchParams();
+  
   const planTypeParam = searchParams.get("type") || "monthly"; 
   const planLevelParam = searchParams.get("level") || "vip";   
   const priceFromUrlParam = searchParams.get("price");         
