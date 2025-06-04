@@ -50,6 +50,7 @@ export default function AboutSection() {
                   borderRadius: 4,
                   overflow: 'hidden',
                   boxShadow: 3,
+                  
                   height: '500px',
                   transform: 'rotate(0deg)',
                   transition: 'transform 0.3s ease',
@@ -59,7 +60,7 @@ export default function AboutSection() {
                 }}
               >
                 <Image
-                  src="/images/blocorosa.png"
+                  src="/images/salon.jpg"
                   alt="Equipe da empresa"
                   fill
                   style={{ objectFit: 'cover' }}

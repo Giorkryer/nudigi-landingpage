@@ -31,7 +31,7 @@ const states = [
 const planDetailsFallback = {
   basic: { 
     name: "Básico", 
-    monthlyPrice: 50.00,                 
+    monthlyPrice: 50.00,                  
     annualTotalPrice: 45.00 * 12,         
     defaultMonthlyDisplay: 50.00,         
     defaultAnnualDisplayMonthly: 45.00    
@@ -39,7 +39,7 @@ const planDetailsFallback = {
   vip: { 
     name: "Vip", 
     monthlyPrice: 70.00,                  
-    annualTotalPrice: 50.00 * 12,        
+    annualTotalPrice: 50.00 * 12,         
     defaultMonthlyDisplay: 70.00,         
     defaultAnnualDisplayMonthly: 50.00    
   },
@@ -290,8 +290,16 @@ export default function CheckoutPage() {
                 Forma de Pagamento
               </Typography>
               <Box sx={{ mb: 2 }}>
-                <FormControlLabel control={<Checkbox checked={paymentMethod === "credit"} onChange={() => setPaymentMethod("credit")} icon={<CreditCard />} checkedIcon={<CreditCard sx={{ color: 'black' }} />}/>} label="Cartão de Crédito" sx={{ mr: 3 }} />
-                <FormControlLabel control={<Checkbox checked={paymentMethod === "debit"} onChange={() => setPaymentMethod("debit")} icon={<AccountBalance />} checkedIcon={<AccountBalance sx={{ color: 'black' }} />}/>} label="Cartão de Débito" />
+                <FormControlLabel 
+                  control={<Checkbox checked={paymentMethod === "credit"} onChange={() => setPaymentMethod("credit")} icon={<CreditCard />} checkedIcon={<CreditCard sx={{ color: 'black' }} />}/>} 
+                  label="Cartão de Crédito" 
+                  sx={{ mr: 3, '& .MuiTypography-root': { color: 'black' } }} 
+                />
+                <FormControlLabel 
+                  control={<Checkbox checked={paymentMethod === "debit"} onChange={() => setPaymentMethod("debit")} icon={<AccountBalance />} checkedIcon={<AccountBalance sx={{ color: 'black' }} />}/>} 
+                  label="Cartão de Débito" 
+                  sx={{ '& .MuiTypography-root': { color: 'black' } }}
+                />
               </Box>
               {(paymentMethod === "credit" || paymentMethod === "debit") && ( 
                 <Grid container spacing={2}>
@@ -414,7 +422,7 @@ export default function CheckoutPage() {
               </Typography>
               <Divider sx={{ my: 3 }} />
               <Box sx={{ mb: 3 }}>
-                <Typography variant="body1" sx={{ fontWeight: "bold", mb: 1 }}>
+                <Typography variant="body1" sx={{ fontWeight: "bold", mb: 1, color: 'black' }}>
                   Resumo do Plano:
                 </Typography>
                 <Typography variant="body2" sx={{ color: "#666" }}>

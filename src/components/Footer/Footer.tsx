@@ -36,7 +36,7 @@ export default function Footer() {
       sx={{
         bgcolor: '#111827',
         color: '#f0f0f0',
-        py: 2, // Altura reduzida
+        py: 1, 
         px: { xs: 2, md: 4 },
         position: 'relative',
         overflow: 'hidden',
@@ -97,10 +97,8 @@ export default function Footer() {
               </Typography>
               <Box>
                 {[
-                  { text: 'Nossos Serviços', href: '#servicos' },
-                  { text: 'Equipe Profissional', href: '#equipe' },
-                  { text: 'Depoimentos', href: '#depoimentos' },
-                  { text: 'Galeria', href: '#galeria' }
+                  { text: 'Sobre', href: '#quem-somos' },
+                  { text: 'Equipe Profissional', href: 'https://wa.me/5585988887777' }
                 ].map((link, index) => (
                   <Link 
                     key={index} 
@@ -169,7 +167,6 @@ export default function Footer() {
               </Typography>
               <Box sx={{ display: 'flex', gap: 1.5 }}>
                 {[
-                  { icon: <Facebook />, href: '#' },
                   { icon: <Instagram />, href: '#' },
                   { icon: <Twitter />, href: '#' },
                   { icon: <WhatsApp />, href: 'https://wa.me/5585988887777' }
