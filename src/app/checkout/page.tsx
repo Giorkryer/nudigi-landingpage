@@ -14,7 +14,7 @@ import {
   Checkbox,
   Divider,
 } from "@mui/material";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { LocalizationProvider, MobileDatePicker } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import dayjs from "dayjs";
@@ -53,7 +53,6 @@ const planDetailsFallback = {
 
 export default function CheckoutClient() {
   const router = useRouter();
-  const searchParams = useSearchParams();
 
   const planTypeParam = searchParams.get("type") || "monthly"; 
   const planLevelParam = searchParams.get("level") || "vip";   
