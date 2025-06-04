@@ -40,7 +40,7 @@ const planDetailsFallback = {
     name: "Vip", 
     monthlyPrice: 70.00,                  
     annualTotalPrice: 50.00 * 12,         
-    defaultMonthlyDisplay: 70.00,         
+    defaultMonthlyDisplay: 70.00, 
     defaultAnnualDisplayMonthly: 50.00    
   },
   premium: { 
@@ -55,7 +55,7 @@ const planDetailsFallback = {
 export default function CheckoutPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  
+
   const planTypeParam = searchParams.get("type") || "monthly"; 
   const planLevelParam = searchParams.get("level") || "vip";   
   const priceFromUrlParam = searchParams.get("price");         
